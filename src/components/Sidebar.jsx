@@ -157,6 +157,22 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen, isMobile }) => {
                 <FaUsers style={{ fontSize: 18 }} />
                 {sidebarOpen && <span>Forum</span>}
               </div>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: sidebarOpen ? 12 : 0,
+                padding: '0.75rem 0',
+                color: '#333',
+                fontWeight: 500,
+                fontSize: 16,
+                cursor: 'pointer',
+                borderRadius: 8,
+                transition: 'background 0.2s',
+                marginBottom: 4
+              }} onClick={() => { setSidebarOpen(!isMobile); navigate('/events'); }}>
+                <FaChartBar style={{ fontSize: 18 }} />
+                {sidebarOpen && <span>Events</span>}
+              </div>
             </div>
             {/* Settings at bottom */}
             <div style={{ width: '100%', marginTop: 'auto' }}>

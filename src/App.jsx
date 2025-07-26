@@ -4,6 +4,8 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import ForumPage from './pages/ForumPage';
 import ForumDetailPage from './pages/ForumDetailPage';
+import EventsPage from './pages/EventsPage';
+import EventDetailPage from './pages/EventDetailPage';
 
 // Protected Route Wrapper
 const ProtectedRoute = () => {
@@ -76,6 +78,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/forums" element={<ForumPage />} />
           <Route path="/forum/:id" element={<ForumDetailPage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/event/:id" element={<EventDetailPage />} />
         </Route>
 
         {/* Redirect root to login or dashboard based on auth status */}
